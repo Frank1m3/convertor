@@ -6,17 +6,41 @@ HTML
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Conversor de Monedas</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <style>
+        .rectangulo {
+            background-color: #2c5c5f;
+            border: 1px solid #4d6b1d;
+            padding: 10px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="rectangulo">
+        <h1>Pira Pire</h1>
+    </div>
+    <style>
+        body {
+            background-color: hsl(204, 55%, 38%);
+        }
+    </style>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conversor de Monedas</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
     <h1>Conversor de Monedas</h1>
     <form method="POST">
         <label for="amount">Cantidad:</label>
-        <input type="number" id="amount" name="amount" required>
+        <input type="number" style="background-color: hsl(204, 55%, 38%); border: 1px solid #4d6b1d; padding: 5px;" id="amount" name="amount" required>
         <label for="from_currency">De:</label>
-        <input type="text" id="from_currency" name="from_currency" required>
+        <input type="text" style="background-color: hsl(204, 55%, 38%); border: 1px solid #4d6b1d;" id="from_currency" name="from_currency" required>
         <label for="to_currency">A:</label>
-        <input type="text" id="to_currency" name="to_currency" required>
-        <button type="submit">Convertir</button>
+        <input type="text" style="background-color: hsl(204, 55%, 38%); border: 1px solid #4d6b1d;" id="to_currency" name="to_currency" required>
+        <button style="background-color: hsl(71, 64%, 35%); border: 1px solid #4d6b1d; padding: 5px;" type="submit">Convertir</button>
     </form>
     {% if conversion_result %}
         <h2>Resultado: {{ conversion_result }}</h2>
